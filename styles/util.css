@@ -1,0 +1,21 @@
+.flex {
+  display: flex;
+}
+
+.container {
+  padding-inline: 1.6rem;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (width >= 1280px) {
+  .container {
+    padding-inline: 3.2rem;
+  }
+
+  .desktop-only {
+    display: inline;
+  }
+}

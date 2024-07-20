@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --brand-color-light: #60A5FA;
+  --brand-color-dark: #1D4ED8;
+  --bg-color: #0F172A;
+  --stroke-color: #1E293B;
+  --text-color-primary: #F1F5F9;
+  --text-color-secondary: #CBD5E1;
+
+  --ff-Archivo: "Archivo", sans-serif;
+  --heading1: 800 2.4rem/135% var(--ff-Archivo);
+  --heading2: 800 1.6rem/140% var(--ff-Archivo);
+  --heading3: 800 1.4rem/140% var(--ff-Archivo);
+  --text: 600 1.4rem/145% var(--ff-Archivo);
+  --span: 400 1.4rem/160% var(--ff-Archivo);
+}
+
+body {
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-family: var(--ff-Archivo);
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
