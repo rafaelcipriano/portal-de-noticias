@@ -25,6 +25,7 @@
         overflow: hidden; /* Remove o estouro do elemento */
         text-overflow: ellipsis; /* Adiciona “...” no final */
         display: -webkit-box;
+        line-clamp: 2;
         -webkit-line-clamp: 2; /* Número de linhas */
         -webkit-box-orient: vertical; /* Orientação vertical */
       }
@@ -61,6 +62,7 @@
           overflow: hidden; /* Remove o estouro do elemento */
           text-overflow: ellipsis; /* Adiciona “...” no final */
           display: -webkit-box;
+          line-clamp: 3;
           -webkit-line-clamp: 3; /* Número de linhas */
           -webkit-box-orient: vertical; /* Orientação vertical */
         }
@@ -79,6 +81,7 @@
 
 @media (width >= 426px) and (width < 1280px) {
   #features {
+    grid-area: features;
     grid-template-columns: 1fr;
 
     & > div.grid {

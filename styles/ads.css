@@ -1,0 +1,29 @@
+.ads {
+  width: 100%;
+  position: relative;
+  margin-block: 3.2rem;
+
+  & img {
+    border-radius: .4rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: .8rem;
+    right: .8rem;
+  }
+}
+
+@media (width >= 426px) {
+  .ads {
+    width: 90%;
+    grid-area: ads;
+    margin-block: 0;
+    margin-left: 1.6rem;
+  }
+}
