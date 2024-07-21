@@ -1,35 +1,11 @@
 #ai {
+  grid-area: ai;
   border-top: 1px solid var(--stroke-color);
 
-  & header {
-    padding-top: 1.2rem;
-    justify-content: space-between;
-  
-    & strong {
-      font: var(--text);
-      color: var(--text-color-secondary);
-    }
-  
-    & button {
-      border: none;
-      background-color: transparent;
-      font: var(--text);
-      color: var(--text-color-secondary);
-      padding-right: 2.4rem;
-      background: url(../assets/icons/ArrowRight.svg) no-repeat right/contain;
-      cursor: pointer;
-  
-      &:hover {
-        color: var(--brand-color-light);
-        background-image: url(../assets/icons/ArrowRightHover.svg);
-      }
-    }
-  }
-
-  & div.grid {
+  & nav.grid {
     gap: 3.2rem;
 
-    & figure {
+    & a figure {
       gap: 1.6rem;
 
       & img {
@@ -40,10 +16,11 @@
       }
 
       & figcaption {
-
         & h3 {
           font: var(--heading2);
           color: var(--text-color-primary);
+
+          /* Controle de exibição de linhas */
           overflow: hidden; /* Remove o estouro do elemento */
           text-overflow: ellipsis; /* Adiciona “...” no final */
           display: -webkit-box;
@@ -55,6 +32,8 @@
         & p {
           font: var(--span);
           color: var(--text-color-secondary);
+
+          /* Controle de exibição de linhas */
           overflow: hidden; /* Remove o estouro do elemento */
           text-overflow: ellipsis; /* Adiciona “...” no final */
           display: -webkit-box;
@@ -67,17 +46,9 @@
   }
 }
 
-@media (width >= 426px) {
-  #ai {
-    grid-area: ai;
-  }
-}
-
 @media (width >= 1280px) {
   #ai {
-    grid-area: ai;
-
-    & div.grid figure img {
+    & nav.grid figure img {
       width: 17.6rem;
       height: 17.6rem;
     }

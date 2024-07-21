@@ -1,35 +1,11 @@
 aside {
+  grid-area: aside;
   padding-bottom: 1.6rem;
 
-  & header {
-    padding-top: 1.2rem;
-    justify-content: space-between;
-  
-    & strong {
-      font: var(--text);
-      color: var(--text-color-secondary);
-    }
-  
-    & button {
-      border: none;
-      background-color: transparent;
-      font: var(--text);
-      color: var(--text-color-secondary);
-      padding-right: 2.4rem;
-      background: url(../assets/icons/ArrowRight.svg) no-repeat right/contain;
-      cursor: pointer;
-  
-      &:hover {
-        color: var(--brand-color-light);
-        background-image: url(../assets/icons/ArrowRightHover.svg);
-      }
-    }
-  }
-
-  & div.grid {
+  & nav.grid {
     gap: 3.2rem;
 
-    & figure {
+    & a figure {
       gap: 1.5rem;
 
       & img {
@@ -40,6 +16,8 @@ aside {
       & h3 {
         font: var(--heading3);
         color: var(--text-color-primary);
+
+        /* Controle de exibição de linhas */
         overflow: hidden; /* Remove o estouro do elemento */
         text-overflow: ellipsis; /* Adiciona “...” no final */
         display: -webkit-box;
@@ -48,13 +26,6 @@ aside {
         -webkit-box-orient: vertical; /* Orientação vertical */
       }
     }
-  }
-}
-
-@media (width >= 426px) {
-  aside {
-    grid-area: aside;
-    margin-left: 1.6rem;
   }
 }
 

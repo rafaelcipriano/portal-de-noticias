@@ -1,38 +1,14 @@
 #weekly {
+  grid-area: weekly;
   margin-block: 8rem;
   border-block: 1px solid var(--stroke-color);
 
-  & header {
-    padding-top: 1.2rem;
-    justify-content: space-between;
-
-    & strong {
-      font: var(--text);
-      color: var(--text-color-secondary);
-    }
-
-    & button {
-      border: none;
-      background-color: transparent;
-      font: var(--text);
-      color: var(--text-color-secondary);
-      padding-right: 2.4rem;
-      background: url(../assets/icons/ArrowRight.svg) no-repeat right/contain;
-      cursor: pointer;
-
-      &:hover {
-        color: var(--brand-color-light);
-        background-image: url(../assets/icons/ArrowRightHover.svg);
-      }
-    }
-  }
-
-  & > div.grid {
+  & > nav.grid {
     grid-auto-flow: row;
     gap: 1.6rem;
     padding-block: 2.4rem;
 
-    & figure {
+    & a figure {
       position: relative;
       flex: 1;
 
@@ -50,6 +26,8 @@
       & h3 {
         color: var(--text-color-primary);
         font: var(--heading2);
+
+        /* Controle de exibição de linhas */
         overflow: hidden; /* Remove o estouro do elemento */
         text-overflow: ellipsis; /* Adiciona “...” no final */
         display: -webkit-box;
@@ -61,20 +39,17 @@
   }
 }
 
-@media (width >= 426px) and (width < 1280px) {
+@media (width > 426px) and (width < 768px) {
   #weekly {
-    grid-area: weekly;
-    & > div.grid {
+    & > nav.grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 
-@media (width >= 1280px) {
+@media (width >= 768px) {
   #weekly {
-    grid-area: weekly;
-    
-    & > div.grid {
+    & > nav.grid {
       grid-template-columns: repeat(4, 1fr);
       grid-auto-flow: column;
     }

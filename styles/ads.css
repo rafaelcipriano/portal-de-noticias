@@ -1,7 +1,8 @@
 .ads {
+  grid-area: ads;
   width: 100%;
   position: relative;
-  margin-block: 3.2rem;
+  margin: 3.2rem auto;
 
   & img {
     border-radius: .4rem;
@@ -19,11 +20,9 @@
   }
 }
 
-@media (width >= 426px) {
+@media (width >= 768px) {
   .ads {
-    width: 90%;
-    grid-area: ads;
-    margin-block: 0;
-    margin-left: 1.6rem;
+    width: calc(100% - 1.6rem);
+    margin: 0 0 0 auto;
   }
 }

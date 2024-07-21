@@ -30,7 +30,13 @@ body {
 }
 
 main {
-  margin-top: 4rem;
+  margin-block: 4rem 8rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "features"
+                       "weekly"
+                       "ai"
+                       "ads"
+                       "aside";
   
 }
 
@@ -50,13 +56,51 @@ a {
   text-transform: uppercase;
 }
 
-@media (width >= 426px) {
+.more-content {
+  padding-top: 1.2rem;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+
+  & strong {
+    font: var(--text);
+    color: var(--text-color-secondary);
+  }
+
+  & button {
+    border: none;
+    background-color: transparent;
+    font: var(--text);
+    color: var(--text-color-secondary);
+    padding-right: 2.4rem;
+    background: url(../assets/icons/ArrowRight.svg) no-repeat right/contain;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--brand-color-light);
+      background-image: url(../assets/icons/ArrowRightHover.svg);
+    }
+  }
+}
+
+@media (width > 425px) and (width < 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "features features"
+    "weekly weekly"
+    "ai ai"
+    "ads ads"
+    "aside aside";
+  }
+}
+
+@media (width >= 768px) {
   main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
     "features features features"
     "weekly weekly weekly"
     "ai ai ads"
-    "ai ai aside";
+    "ai ai aside"
   }
 }
