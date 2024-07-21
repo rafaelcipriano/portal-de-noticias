@@ -29,6 +29,22 @@ body {
   background-color: var(--bg-color);
 }
 
+main {
+  margin-top: 4rem;
+}
+
 a {
   text-decoration: none;
+}
+
+.tag {
+  display: inline-block;
+  color: var(--text-color-primary);
+  background: var(--brand-color-dark);
+  padding: .4rem .8rem;
+  box-shadow: 0px .4rem 1.6rem rgba(2, 6, 23, 0.25);
+  border-radius: .4rem;
+  font: 500 1rem/1.2rem var(--ff-Archivo);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }

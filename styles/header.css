@@ -12,7 +12,7 @@ header {
   }
 
   & .secondary {
-    overflow-x: scroll;
+    overflow-x: auto;
     padding-block: 1.4rem;
     border-block: 1px solid var(--stroke-color);
 

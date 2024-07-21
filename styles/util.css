@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .container {
   padding-inline: 1.6rem;
 }
