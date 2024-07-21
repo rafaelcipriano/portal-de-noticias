@@ -15,15 +15,18 @@
 
     & figcaption {
       position: absolute;
-      bottom: 2.4rem;
-      left: 2.4rem;
+      bottom: 1.6rem;
+      left: 1.6rem;
 
       & h2 {
         margin-top: .8rem;
         font: var(--heading1);
         color: var(--text-color-primary);
-        height: 9.6rem;
-        overflow: hidden;
+        overflow: hidden; /* Remove o estouro do elemento */
+        text-overflow: ellipsis; /* Adiciona “...” no final */
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Número de linhas */
+        -webkit-box-orient: vertical; /* Orientação vertical */
       }
     }
 
@@ -55,8 +58,11 @@
           margin-top: .8rem;
           color: var(--text-color-primary);
           font: var(--heading3);
-          height: 6rem;
-          overflow: hidden;
+          overflow: hidden; /* Remove o estouro do elemento */
+          text-overflow: ellipsis; /* Adiciona “...” no final */
+          display: -webkit-box;
+          -webkit-line-clamp: 3; /* Número de linhas */
+          -webkit-box-orient: vertical; /* Orientação vertical */
         }
       }
 
@@ -71,6 +77,17 @@
   }
 }
 
+@media (width >= 426px) and (width < 1280px) {
+  #features {
+    grid-template-columns: 1fr;
+
+    & > div.grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+}
+
 @media (width >= 1280px) {
   #features {
     grid-template-columns: repeat(2, 1fr);
@@ -80,6 +97,18 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    & > .card figcaption h2 { height: auto; }
+    & > .card {
+      position: relative;
+      border-radius: .4rem;
+      overflow: hidden;
+  
+      & figcaption {
+        bottom: 2.4rem;
+        left: 2.4rem;
+      }
+    }
+    /* & > .card figcaption h2 { 
+      height: auto; 
+    } */
   }
 }
