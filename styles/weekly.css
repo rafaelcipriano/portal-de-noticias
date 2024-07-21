@@ -70,6 +70,8 @@
 
 @media (width >= 1280px) {
   #weekly {
+    grid-area: weekly;
+    
     & > div.grid {
       grid-template-columns: repeat(4, 1fr);
       grid-auto-flow: column;

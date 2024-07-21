@@ -31,6 +31,7 @@ body {
 
 main {
   margin-top: 4rem;
+  
 }
 
 a {
@@ -47,4 +48,15 @@ a {
   font: 500 1rem/1.2rem var(--ff-Archivo);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+@media (width >= 1280px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "features features features"
+    "weekly weekly weekly"
+    "ai ai ads"
+    "ai ai aside";
+  }
 }

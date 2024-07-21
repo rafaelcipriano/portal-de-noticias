@@ -92,6 +92,7 @@
   #features {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.6rem;
+    grid-area: features;
 
     & > div.grid {
       grid-template-columns: repeat(2, 1fr);
